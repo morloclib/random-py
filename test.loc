@@ -1,0 +1,4 @@
+module test-random-py (test)
+
+import random.test (test)
+import random-py

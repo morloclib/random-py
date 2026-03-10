@@ -1,0 +1,41 @@
+module random-py (*)
+
+import random
+import root-py
+
+
+-- Typeclass instances
+-----------------------
+
+instance Random Real where
+  source Py from "core.py" ("morloc_random_real" as random)
+
+instance Random Int where
+  source Py from "core.py" ("morloc_random_int" as random)
+
+instance Random Bool where
+  source Py from "core.py" ("morloc_random_bool" as random)
+
+instance RandomRange Real where
+  source Py from "core.py" ("morloc_randomRange_real" as randomRange)
+
+instance RandomRange Int where
+  source Py from "core.py" ("morloc_randomRange_int" as randomRange)
+
+instance RandomGroup List where
+  source Py from "core.py"
+    ( "morloc_choice" as choice
+    , "morloc_weightedChoice" as weightedChoice
+    , "morloc_sample" as sample
+    , "morloc_sampleWith" as sampleWith
+    , "morloc_permute" as permute
+    )
+
+
+-- Standalone functions
+------------------------
+
+source Py from "core.py"
+    ( "morloc_bernoulli" as bernoulli
+    , "morloc_setSeed" as setSeed
+    )

@@ -1,0 +1,11 @@
+name: random-py
+version: 0.1.0
+homepage: https://github.com/morloclib/random-py
+synopsis: Python implementations for random number generation
+description: Python implementations for random number generation
+category: numeric
+license: MIT
+author: "Zebulun Arendsee"
+maintainer: "z@morloc.io"
+github: https://github.com/morloclib/random-py
+bug-reports: https://github.com/morloclib/random-py
